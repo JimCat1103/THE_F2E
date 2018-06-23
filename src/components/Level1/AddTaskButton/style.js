@@ -10,7 +10,7 @@ export const Style = styled.div`
     padding-left: 20px;
     
     span {
-        font-family: Roboto-Regular;
+        font-family: "Roboto-Regular", serif;
         font-size: 24px;
         color: #C8C8C8;
         text-align: left;

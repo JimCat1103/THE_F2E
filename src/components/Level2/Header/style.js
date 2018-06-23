@@ -8,7 +8,7 @@ export const Style = styled.div`
         background: #7828B4;
         margin-right: 5vw;
         & > div {
-            font-family: Optima-ExtraBlack;
+            font-family: "Optima-ExtraBlack", serif;
             font-size: 36px;
             color: #FFFFFF;
             line-height: 92px;
@@ -47,22 +47,22 @@ export const Style = styled.div`
                 }
                 
                 input:-moz-placeholder {
-                    font-family: Roboto-Italic;
+                    font-family: "Roboto-Italic", serif;
                     font-size: 20px;
                     color: rgba(255,255,255,0.50);
                 }
                 input::-moz-placeholder {
-                    font-family: Roboto-Italic;
+                    font-family: "Roboto-Italic", serif;
                     font-size: 20px;
                     color: rgba(255,255,255,0.50);
                 }
                 input:-ms-input-placeholder {
-                    font-family: Roboto-Italic;
+                    font-family: "Roboto-Italic", serif;
                     font-size: 20px;
                     color: rgba(255,255,255,0.50);
                 }
                 input::-webkit-input-placeholder {
-                    font-family: Roboto-Italic;
+                    font-family: "Roboto-Italic", serif;
                     font-size: 20px;
                     color: rgba(255,255,255,0.50);
                 }

@@ -113,14 +113,14 @@ export const Style = styled.ul`
                                 color: #000000;
                             }
                             & > div:nth-child(2) {
-                                font-family: Roboto-Regular;
+                                font-family: "Roboto-Regular", serif;
                                 font-size: 16px;
                                 color: #9B9B9B;
                             }
                         }
                         .ticket-info {
                             span {
-                                font-family: Roboto-Regular;
+                                font-family: "Roboto-Regular", serif;
                                 font-size: 16px;
                                 color: #9B9B9B;
                             }
@@ -141,7 +141,7 @@ export const Style = styled.ul`
                             margin-right: 5px;
                         }
                         & > div:nth-child(2) {
-                            font-family: Roboto-Regular;
+                            font-family: "Roboto-Regular", serif;
                             font-size: 16px;
                             color: #9B9B9B;
                         }

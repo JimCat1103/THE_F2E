@@ -5,7 +5,7 @@ export const Style = styled.div`
     --borderColor: #9013FE;
     
     & > div:nth-child(1) {
-        font-family: Roboto-Italic;
+        font-family: "Roboto-Italic", serif;
         font-size: 16px;
         color: #9013FE;
         padding-left: 10px;

@@ -27,7 +27,7 @@ export const Style = styled.div`
     }
     
     span {
-        font-family: Roboto-Regular;
+        font-family: "Roboto-Regular", serif;
         font-size: 24px;
         color: #C8C8C8;
         text-align: left;
@@ -40,7 +40,7 @@ export const Style = styled.div`
         .date-and-time {
             margin-top: 20px;
             & > div:nth-child(1) {
-                font-family: Roboto-Medium;
+                font-family: "Roboto-Medium", serif;
                 font-size: 20px;
                 color: #000000;
                 margin-bottom: 5px;
@@ -69,7 +69,7 @@ export const Style = styled.div`
         .upload-file {
             margin-bottom: 20px;
             & > div:nth-child(1) {
-                font-family: Roboto-Medium;
+                font-family: "Roboto-Medium", serif;
                 font-size: 20px;
                 color: #000000;
                 margin-bottom: 5px;
@@ -98,7 +98,7 @@ export const Style = styled.div`
         .edit-content {
             margin-bottom: 20px;
             & > div:nth-child(1) {
-                font-family: Roboto-Medium;
+                font-family: "Roboto-Medium", serif;
                 font-size: 20px;
                 color: #000000;
                 margin-bottom: 5px;
@@ -114,7 +114,7 @@ export const Style = styled.div`
                     height: 100%;
                     box-sizing: border-box;
                     padding: 15px;
-                    font-family: Roboto-Regular;
+                    font-family: "Roboto-Regular", serif;
                     font-size: 16px;
                     color: #000000;
                     line-height: 24px;
@@ -125,7 +125,7 @@ export const Style = styled.div`
                     appearance: none;
                 }
                 textarea::-webkit-input-placeholder {
-                    font-family: Roboto-Regular;
+                    font-family: "Roboto-Regular", serif;
                     font-size: 16px;
                     color: #000000;
                     line-height: 24px;

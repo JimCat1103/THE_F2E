@@ -8,3 +8,5 @@ export const ON_FROM_DATE = 'ON_FROM_DATE';
 export const ON_TO_DATE = 'ON_TO_DATE';
 export const ON_CHECKBOX_CHANGE = 'ON_CHECKBOX_CHANGE';
 export const ON_DISABLE_CHECK = 'ON_DISABLE_CHECK';
+
+export const ON_MENU_CHANGE = 'ON_MENU_CHANGE';
