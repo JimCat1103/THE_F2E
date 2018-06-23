@@ -5,7 +5,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight';
 import faCaretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
 import {Style} from "./style";
-import {WEEKLY, week_select_data} from './Home/consts';
+import {WEEKLY, week_select_data, financial_data} from './Home/consts';
 
 const Level3 = pure(({is_week_select_open=false, onWeekSelectClick=()=>{}, week_select=WEEKLY, onSelectWeek=()=>{}})=>{
     return <Style>
@@ -30,6 +30,19 @@ const Level3 = pure(({is_week_select_open=false, onWeekSelectClick=()=>{}, week_
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div className='financial-info'>
+            {financial_data.map((data, index) => {
+                const {shape, name, cost, cost_color} = data;
+                return <div key={`financial_data_${index}`}>
+                    <div className='title'>
+                        <i><FontAwesomeIcon icon={shape}/></i>
+                        <span>{name}</span>
+                    </div>
+                    <div className={`cost ${cost_color}`}>{cost}</div>
+                </div>
+            })}
         </div>
 
 

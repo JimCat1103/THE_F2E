@@ -12,6 +12,23 @@ export function clearFix() {
 }
 
 export const Style = styled.div`
+    --redColor: #D0021B;
+    --greenColor: #7ED321;
+    --blueColor: #4A90E2;
+    --grayColor: #9B9B9B;
+    --whiteColor: #ffffff;
+    --blackColor: #000000;
+
+    .green {
+        color: var(--greenColor);
+    }
+    .red {
+        color: var(--redColor);
+    }
+    .blue {
+        color: var(--blueColor);
+    }
+
     background: #F2F2F2;
     
     .info {
@@ -22,7 +39,7 @@ export const Style = styled.div`
             flex: 1;
             font-family: "HelveticaNeue-Bold", serif;
             font-size: 24px;
-            color: #000000;
+            color: var(--blackColor);
             font-weight: bold;
         }
         .right {
@@ -32,7 +49,7 @@ export const Style = styled.div`
             & > * {
                 font-family: "HelveticaNeue-Medium", serif;
                 font-size: 16px;
-                color: #9B9B9B;
+                color: var(--grayColor);
                 text-align: right;
             }
             .dates {
@@ -63,17 +80,48 @@ export const Style = styled.div`
                     font-size: 16px;
                     height: 34px;
                     line-height: 34px;
-                    color: #000000;
+                    color: var(--blackColor);
                     text-align: center;
                 }
                 & > div:hover {
-                    background: #000000;
-                    color: #ffffff;
+                    background: var(--blackColor);
+                    color: var(--whiteColor);
                 }
             }
             .week-open {
                 opacity: 1;
             }
+        }
+    }
+    
+    .financial-info {
+        margin-top: 16px;
+        padding: 0 30px;
+        display: flex;
+        flex-wrap: wrap;
+        height: 138px;
+        & > div {
+            width: 30%;
+            height: 100%;
+            background: var(--whiteColor);
+            
+            .title {
+                font-family: "HelveticaNeue-Medium", serif;
+                font-size: 16px;
+                color: var(--blackColor);
+                text-align: center;
+                padding-top: 24px;
+                padding-bottom: 13px;
+            }
+            .cost {
+                font-family: "HelveticaNeue-Bold", serif;
+                font-size: 36px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        & > div ~ div {
+            margin-left: 5%;
         }
     }
     
@@ -86,6 +134,17 @@ export const Style = styled.div`
     @media screen and (max-width: 767px) {
         .info {
             padding: 20px 15px 0;
+        }
+        
+        .financial-info {
+            display: block;
+            & > div {
+                width: 100%;
+            }
+            & > div ~ div {
+                margin-left: 0;
+                margin-top: 16px;
+            }
         }
     }
 `;
