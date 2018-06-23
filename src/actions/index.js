@@ -1,6 +1,6 @@
 import {initLevel1, onDateChange, onTimeChange, onDrop} from './level1';
 import {onFromDateChange, onToDateChange, onCheckboxChange, onDisableCheck} from './level2';
-import {onMenuChange} from './level3';
+import {onMenuChange, onWeekSelectClick, onSelectWeek} from './level3';
 
 export {
     initLevel1,
@@ -11,5 +11,7 @@ export {
     onToDateChange,
     onCheckboxChange,
     onDisableCheck,
-    onMenuChange
+    onMenuChange,
+    onWeekSelectClick,
+    onSelectWeek
 };

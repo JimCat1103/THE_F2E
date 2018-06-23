@@ -44,7 +44,7 @@ export const Style = styled.header`
         .bm-item-list {
             color: #ffffff;
             padding: 2rem;
-            font-size: 1.6rem;
+            font-size: 2rem;
             & > a {
                 color: #ffffff;
                 margin-top: 10px
