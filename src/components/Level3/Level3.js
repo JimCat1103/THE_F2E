@@ -4,8 +4,10 @@ import {pure} from 'recompose';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight';
 import faCaretDown from '@fortawesome/fontawesome-free-solid/faCaretDown';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 import {Style} from "./style";
-import {WEEKLY, week_select_data, financial_data} from './Home/consts';
+import {WEEKLY, week_select_data, financial_data, charts_options} from './Home/consts';
 
 const Level3 = pure(({is_week_select_open=false, onWeekSelectClick=()=>{}, week_select=WEEKLY, onSelectWeek=()=>{}})=>{
     return <Style>
@@ -45,7 +47,12 @@ const Level3 = pure(({is_week_select_open=false, onWeekSelectClick=()=>{}, week_
             })}
         </div>
 
-
+        <div className='charts'>
+            <HighchartsReact
+                highcharts={Highcharts}
+                options={charts_options}
+            />
+        </div>
     </Style>
 });
 

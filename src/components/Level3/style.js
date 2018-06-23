@@ -125,6 +125,19 @@ export const Style = styled.div`
         }
     }
     
+    .charts {
+        padding: 0 30px;
+        margin-top: 15px;
+        
+        .xAxis-styles {
+            > text {
+                font-size: 16px !important;
+                font-family: "HelveticaNeue-Medium", serif !important;
+                fill: var(--grayColor) !important;
+            }
+        }
+    }
+    
     @media screen and (max-width: 341px) {
         .info {
             display: block;
