@@ -1,6 +1,14 @@
 import faHandHolding from '@fortawesome/fontawesome-free-solid/faHandHolding';
 import faMoneyBill from '@fortawesome/fontawesome-free-solid/faMoneyBill';
 import faReceipt from '@fortawesome/fontawesome-free-solid/faReceipt';
+import faArrowUp from '@fortawesome/fontawesome-free-solid/faArrowUp';
+import faArrowDown from '@fortawesome/fontawesome-free-solid/faArrowDown';
+import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook';
+import faGoogle from '@fortawesome/fontawesome-free-brands/faGoogle';
+import faDiscord from '@fortawesome/fontawesome-free-brands/faDiscord';
+import faWordpress from '@fortawesome/fontawesome-free-brands/faWordpress';
+import faClock from '@fortawesome/fontawesome-free-solid/faClock';
+import faMale from '@fortawesome/fontawesome-free-solid/faMale';
 
 export const DAILY = 'Daily';
 export const WEEKLY = 'Weekly';
@@ -100,3 +108,71 @@ export const charts_options = {
         ]
     }]
 };
+
+export const left_table_list_data = [
+    {
+        Icon: faFacebook,
+        name: 'Facebook.com',
+        cost: '45,836',
+        arrow: faArrowUp,
+        arrow_number: '20%',
+        arrow_color: 'green'
+    },
+    {
+        Icon: faGoogle,
+        name: 'google.com',
+        cost: '23,582',
+        arrow: faArrowUp,
+        arrow_number: '12%',
+        arrow_color: 'green'
+    },
+    {
+        Icon: faDiscord,
+        name: 'discord.com',
+        cost: '2,489',
+        arrow: faArrowDown,
+        arrow_number: '15%',
+        arrow_color: 'red'
+    },
+    {
+        Icon: faWordpress,
+        name: 'Wordpress.com',
+        cost: '1,057',
+        arrow: faArrowDown,
+        arrow_number: '30%',
+        arrow_color: 'red'
+    }
+];
+
+export const right_table_list_data = [
+    {
+        image: '/images/125x125.png',
+        name: 'Vintage T-shirt',
+        date_icon: faClock,
+        date: '2018/6/13  13:42',
+        user_icon: faMale,
+        user: 'Belle Willis',
+        cost_title: 'total',
+        cost: '3,200'
+    },
+    {
+        image: '/images/125x125.png',
+        name: 'Cowboy Jacket',
+        date_icon: faClock,
+        date: '2018/6/13  10:45',
+        user_icon: faMale,
+        user: 'Adrian Cummings',
+        cost_title: 'total',
+        cost: '2,800'
+    },
+    {
+        image: '/images/125x125.png',
+        name: 'Coach Coat',
+        date_icon: faClock,
+        date: '2018/6/13  8:26',
+        user_icon: faMale,
+        user: 'Lura Holland',
+        cost_title: 'total',
+        cost: '1,600'
+    }
+];
