@@ -303,6 +303,7 @@ export const Style = styled.div`
         
         .financial-info {
             display: block;
+            height: auto;
             & > div {
                 width: 100%;
             }
