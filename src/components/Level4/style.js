@@ -11,7 +11,6 @@ export const Style = styled.div`
     background: var(--whiteColor);
     max-width: 960px;
     margin: 0 auto;
-    border: solid 1px red;
 
     .green {
         color: var(--greenColor);
@@ -57,11 +56,11 @@ export const Style = styled.div`
             grid-template-columns: repeat(9, 60px);
             grid-template-rows: repeat(10, 50px);
 
-            .content {
+            .image {
                 grid-column: 1 / 9;
                 grid-row: 2 / 10; 
                 
-                background: url("/images/level4/item-1.jpg") 50%;
+                background-position: 50%;
                 background-size: cover;
             }
             .green-border {
@@ -110,6 +109,7 @@ export const Style = styled.div`
                 line-height: 48px;
             }        
             .green-pattern {
+                z-index: 2;
                 grid-column: 2 / 6;
                 grid-row: 9 / end;
                 background-image: url("/images/level4/green-pattern.svg");
@@ -142,6 +142,7 @@ export const Style = styled.div`
                 grid-row: 1 / 5; 
             }
             .number {
+                z-index: 2;
                 grid-column: 6 / end;
                 grid-row: 1;
                 
@@ -157,6 +158,7 @@ export const Style = styled.div`
                 grid-row: 2 / 6; 
             }
             .subtitle {
+                z-index: 2;
                 grid-column: 1 / end;
                 grid-row: 2;
                 margin-left: -18px;
@@ -169,11 +171,11 @@ export const Style = styled.div`
                 text-align: left;
                 align-self: self-end;
             }
-            .content {
+            .image {
                 grid-column: 1 / 5;
                 grid-row: 3 / 7; 
                 
-                background: url("/images/level4/item-2.jpg") 50%;
+                background-position: 50%;
                 background-size: cover;
             }
             .title {
@@ -182,7 +184,7 @@ export const Style = styled.div`
                 grid-row: 7; 
                 
                 align-self: center;
-                margin-top: 45px;
+                margin-top: 30px;
                 font-size: 48px;
                 color: #000000;
                 text-align: left;
@@ -193,7 +195,7 @@ export const Style = styled.div`
                     content:  attr(text);
                     position: absolute;
                     color: rgba(0,0,0,0.30);
-                    top: -18px;
+                    top: -16px;
                     left: 0;
                     height: 21px;
                     overflow: hidden;
@@ -202,7 +204,7 @@ export const Style = styled.div`
                     content: attr(text);
                     position: absolute;
                     color: rgba(0,0,0,0.10);
-                    top: -27px;
+                    top: -22px;
                     left: 0;
                     height: 12px;
                     overflow: hidden;
@@ -259,11 +261,11 @@ export const Style = styled.div`
                 grid-column: 6 / end;
                 grid-row: 3 / end; 
             }
-            .content {
-                grid-column: 1 / 8;
+            .image {
+                grid-column: 1 / 9;
                 grid-row: 2 / 6; 
                 
-                background: url("/images/level4/item-3.jpg") 50%;
+                background-position: 50%;
                 background-size: cover;
             }
             .subtitle {
@@ -279,6 +281,7 @@ export const Style = styled.div`
                 text-align: left;
             }
             .number {
+                z-index: 2;
                 grid-column: 9 / end;
                 grid-row: 6;
                 
@@ -304,6 +307,7 @@ export const Style = styled.div`
                 grid-row: 2 / 6; 
             }
             .subtitle {
+                z-index: 2;
                 grid-column: 5;
                 grid-row: 1 / end;
                 
@@ -350,11 +354,11 @@ export const Style = styled.div`
                     left: 60px;
                 }
             }
-            .content {
+            .image {
                 grid-column: 2 / end;
                 grid-row: 4 / 12; 
                 
-                background: url("/images/level4/item-4.jpg") 50%;
+                background-position: 50%;
                 background-size: cover;
             }
             .number {
@@ -368,6 +372,7 @@ export const Style = styled.div`
                 line-height: 48px;
             }
             .green-pattern {
+                z-index: 2;
                 grid-column: 2 / end;
                 grid-row: 11 / end;
                 background-image: url("/images/level4/green-pattern.svg");
@@ -382,16 +387,16 @@ export const Style = styled.div`
             grid-template-columns: repeat(10, 60px);
             grid-template-rows: repeat(6, 50px);
             
-            .content {
+            .image {
                 grid-column: 5 / 9;
                 grid-row: 2 / 6; 
                 
                 transform:scaleX(-1);
-                background: url("/images/level4/item-5.jpg") 50%;
+                background-position: 50%;
                 background-size: cover;
             }
             .green-pattern {
-                z-index: 2;
+                z-index: 1;
                 grid-column: 2 / 6;
                 grid-row: 1 / 3;
                 background-image: url("/images/level4/green-pattern.svg");
@@ -409,6 +414,7 @@ export const Style = styled.div`
                 text-align: left;
             }
             .title {
+                z-index: 2;
                 font-family: "Roboto Black",serif;
                 grid-column: 1 / end;
                 grid-row: 3;
@@ -444,6 +450,7 @@ export const Style = styled.div`
                 grid-row: 5 / 7; 
             }
             .number {
+                z-index: 2;
                 grid-column: 3;
                 grid-row: 5;
                 
@@ -493,12 +500,12 @@ export const Style = styled.div`
                     overflow: hidden;
                 }
             }
-            .content {
+            .image {
                 z-index: 2;
                 grid-column: 2 / end;
                 grid-row: 2 / 10; 
                 
-                background: url("/images/level4/item-6.jpg") 50%;
+                background-position: 50%;
                 background-size: cover;
             }
             .number {
@@ -548,6 +555,7 @@ export const Style = styled.div`
                 grid-row: 1 / 7; 
             }
             .subtitle {
+                z-index: 2;
                 grid-column: 1 / end;
                 grid-row: 1;
                 
@@ -559,11 +567,11 @@ export const Style = styled.div`
                 text-align: left;
                 align-self: flex-end;
             }
-            .content {
+            .image {
                 grid-column: 1 / 5;
                 grid-row: 2 / end; 
                 
-                background: url("/images/level4/item-7.jpg") 50%;
+                background-position: 50%;
                 background-size: cover;
             }
             .title {
@@ -604,6 +612,7 @@ export const Style = styled.div`
                 grid-row: 6 / end; 
             }
             .number {
+                z-index: 2;
                 grid-column: 6;
                 grid-row: 9;
                 
@@ -614,10 +623,34 @@ export const Style = styled.div`
                 line-height: 48px;
             }
         }
-
     }
     
-    
+    .pagination {
+        margin-bottom: 30px;
+        * {
+            text-decoration: none;
+            list-style: none;
+        }
+        ul {
+            display: inline-block;
+            
+            & > li {
+                display: inline-block;
+                width: 48px;
+                height: 48px;
+                background: var(--whiteColor);
+                border: solid 1px var(--grayColor);
+                color: var(--blueColor);
+                font-size: 24px;
+                text-align: center;
+                line-height: 48px;
+            }
+            li:hover {
+                cursor: pointer;
+            }
+        }
+    }
+     
     @media screen and (max-width: 767px) {
         .product-list-title {
             & > div:nth-child(1) {

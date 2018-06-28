@@ -1,80 +1,80 @@
+import _ from 'lodash';
 import React from 'react';
 import PropTypes from "prop-types";
-import {pure} from 'recompose';
+import {compose, withHandlers, pure, withState} from "recompose";
 import {Style} from "./style";
 
-const Level4 = pure(()=>{
-    return <Style>
+const enhance = compose(
+    withState('currentPage', 'updateCurrentPage', 1),
+    withState('todosPerPage', 'updateTodosPerPage', 7),
+    withHandlers({
+        handleClick: ({updateCurrentPage}) => (value) => {
+            updateCurrentPage(Number(value));
+        },
+    })
+);
+
+const BaseComponent = pure(({level4={}, currentPage=1, todosPerPage=7, handleClick=()=>{}}) => {
+    const {shop_title, shop_subtitle, shop_data} = level4;
+
+    const indexOfLastTodo = currentPage * todosPerPage;
+    const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
+    const currentShopDatas = shop_data.slice(indexOfFirstTodo, indexOfLastTodo);
+
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(shop_data.length / todosPerPage); i++) {
+        pageNumbers.push(i);
+    }
+
+    return  <Style>
         <div className='product-list-title'>
-            <div>CCCLOTHES</div>
-            <div>MEN’S TOPS</div>
+            <div>{shop_title}</div>
+            <div>{shop_subtitle}</div>
         </div>
-
-
+        {
+            (shop_data.length > 7) && <div className='pagination'>
+                <ul>
+                    {
+                        pageNumbers.map(number => {
+                            return <li
+                                key={number}
+                                id={number}
+                                onClick={() => handleClick(number)}
+                            >
+                                {number}
+                            </li>
+                        })
+                    }
+                </ul>
+            </div>
+        }
         <div className="product-list">
-            <div className='grid-item item-1'>
-                <div className='green-border'></div>
-                <div className='content'></div>
-                <div className='title' text="LINEN BLAZER">LINEN BLAZER</div>
-                <div className='number'>01</div>
-                <div className='green-pattern'></div>
-                <div className='subtitle'>Men’s outfit</div>
-            </div>
-            <div className='grid-item item-2'>
-                <div className='green-border'></div>
-                <div className='number'>02</div>
-                <div className='green-border-fill'></div>
-                <div className='subtitle'>Men’s basics</div>
-                <div className='content'></div>
-                <div className='title' text="FREELIFT">FREELIFT</div>
-            </div>
-            <div className='grid-item item-3'>
-                <div className='green-border-fill'></div>
-                <div className='title' text="SUPER SKINNY">SUPER SKINNY</div>
-                <div className='green-border'></div>
-                <div className='content'></div>
-                <div className='subtitle'>Men’s pattern shirts</div>
-                <div className='number'>03</div>
-            </div>
-            <div className='grid-item item-4'>
-                <div className='green-border'></div>
-                <div className='subtitle'>Men’s cadual</div>
-                <div className='title' text="DENIM">DENIM</div>
-                <div className='content'></div>
-                <div className='number'>04</div>
-                <div className='green-pattern'></div>
-            </div>
-            <div className='grid-item item-5'>
-                <div className='green-pattern'></div>
-                <div className='content'></div>
-                <div className='subtitle'>Men’s jacket</div>
-                <div className='title' text="SWEATSHIRTS">SWEATSHIRTS</div>
-                <div className='green-border'></div>
-                <div className='number'>05</div>
-            </div>
-            <div className='grid-item item-6'>
-                <div className='title' text="VINTAGE DENIM">VINTAGE DENIM</div>
-                <div className='content'></div>
-                <div className='number'>06</div>
-                <div className='green-border-fill'></div>
-                <div className='green-border'></div>
-                <div className='subtitle'>Men’s classic</div>
-            </div>
-            <div className='grid-item item-7'>
-                <div className='green-border'></div>
-                <div className='subtitle'>Men’s shirts</div>
-                <div className='content'></div>
-                <div className='title' text="EDITION">EDITION</div>
-                <div className='green-border-fill'></div>
-                <div className='number'>07</div>
-            </div>
-        </div>
+            {
+                currentShopDatas.map((item, index) => {
+                    const {number = '', position = 1, title = '', subtitle = '', is_green_border, is_green_fill, is_green_pattern, image} = item;
 
+                    return <div key={`product-list-item_${index}`} className={`item-${position}`}>
+                        <div className='number'>{number}</div>
+                        <div className='title' text={title}>{title}</div>
+                        <div className='subtitle'>{subtitle}</div>
+                        {is_green_border && <div className='green-border'></div>}
+                        {is_green_pattern && <div className='green-pattern'></div>}
+                        {is_green_fill && <div className='green-border-fill'></div>}
+                        {!_.isEmpty(image) ? <div className='image' style={{backgroundImage: `url(${image})`}}></div> :
+                            <div className='image' style={{backgroundImage: "url('/images/125x125.png')"}}></div>
+                        }
+                    </div>
+                })
+            }
+        </div>
     </Style>
 });
 
-export default Level4;
+export default enhance(BaseComponent);
 
-Level4.propTypes = {
-
+BaseComponent.propTypes = {
+    level4: PropTypes.object,
+    currentPage: PropTypes.number,
+    todosPerPage: PropTypes.number,
+    handleClick: PropTypes.func
 };

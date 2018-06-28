@@ -10,11 +10,10 @@ export class Level4_route extends Component {
 
     render() {
         const {
+            level4 = {}
         } = this.props;
         return (
-            <Level4
-
-            />
+            <Level4 level4={level4} />
         );
     }
 }
@@ -26,5 +25,5 @@ function mapStateToProps({level4}) {
 export default connect(mapStateToProps)(Level4_route);
 
 Level4_route.propTypes = {
-
+    level4: PropTypes.object
 };
