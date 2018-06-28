@@ -74,16 +74,16 @@ const INITIAL_STATE = {
             image: '/images/level4/item-7.jpg'
         },
 
-        {
-            number: "08",
-            position: 1,
-            title: 'SWEATSHIRTS',
-            subtitle: 'Men’s jacket',
-            is_green_border: true,
-            is_green_fill: false,
-            is_green_pattern: true,
-            image: '/images/level4/item-5.jpg'
-        }
+        // {
+        //     number: "08",
+        //     position: 1,
+        //     title: 'SWEATSHIRTS',
+        //     subtitle: 'Men’s jacket',
+        //     is_green_border: true,
+        //     is_green_fill: false,
+        //     is_green_pattern: true,
+        //     image: '/images/level4/item-5.jpg'
+        // }
     ]
 };
 
