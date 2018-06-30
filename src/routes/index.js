@@ -3,7 +3,8 @@ import Level2_route from "./Level2_route";
 import Level3_route from './Level3/Level3_route';
 import Level3_orders_route from './Level3/Level3_orders_route';
 import Level3_product_route from './Level3/Level3_product_route';
-import Level4_route from './Level4_route';
+import ShopListRoute from './Level4/ShopList_route';
+import ShopOneRoute from './Level4/ShopOne_route';
 
 export default [
     {
@@ -39,7 +40,13 @@ export default [
     {
         exact: true,
         path: "/level4",
-        component: Level4_route,
+        component: ShopListRoute,
         layout: 'MainLayout'
     },
+    {
+        exact: true,
+        path: "/level4/:id",
+        component: ShopOneRoute,
+        layout: 'MainLayout'
+    }
 ];

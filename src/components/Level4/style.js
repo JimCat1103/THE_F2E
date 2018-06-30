@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Style = styled.div`
-    --redColor: #D0021B;
-    --greenColor: #7ED321;
+    --greenColor: #50E3C2;
     --blueColor: #4A90E2;
     --grayColor: #9B9B9B;
     --whiteColor: #ffffff;
@@ -12,16 +11,7 @@ export const Style = styled.div`
     max-width: 960px;
     margin: 0 auto;
 
-    .green {
-        color: var(--greenColor);
-    }
-    .red {
-        color: var(--redColor);
-    }
-    .blue {
-        color: var(--blueColor);
-    }
-    
+
     .product-list-title {
         width: auto;
         text-align: center;
@@ -64,7 +54,7 @@ export const Style = styled.div`
                 background-size: cover;
             }
             .green-border {
-                border: 20px solid #50E3C2;
+                border: 20px solid var(--greenColor);
                 grid-column: 6 / end;
                 grid-row: 1 / 5; 
             }
@@ -73,7 +63,7 @@ export const Style = styled.div`
                 grid-column: 1 / end;
                 grid-row: 2; 
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 line-height: 48px;
                 margin-top: -12px;
@@ -104,7 +94,7 @@ export const Style = styled.div`
                 
                 font-family: "Roboto Black", serif;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: center;
                 line-height: 48px;
             }        
@@ -123,7 +113,7 @@ export const Style = styled.div`
                 font-style: italic;
                 writing-mode: vertical-lr;
                 font-size: 24px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
             }
         }
@@ -137,7 +127,7 @@ export const Style = styled.div`
             grid-template-rows: repeat(7, 50px);
             
             .green-border {
-                border: 20px solid #50E3C2;
+                border: 20px solid var(--greenColor);
                 grid-column: 3 / end;
                 grid-row: 1 / 5; 
             }
@@ -148,12 +138,12 @@ export const Style = styled.div`
                 
                 font-family: "Roboto Black", serif;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: center;
                 line-height: 48px;
             }
             .green-border-fill {
-                background: #50E3C2;
+                background: var(--greenColor);
                 grid-column: 2 / 6;
                 grid-row: 2 / 6; 
             }
@@ -167,7 +157,7 @@ export const Style = styled.div`
                 font-weight: bold;
                 font-style: italic;
                 font-size: 24px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 align-self: self-end;
             }
@@ -186,7 +176,7 @@ export const Style = styled.div`
                 align-self: center;
                 margin-top: 30px;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 line-height: 48px;
                 z-index: 2;
@@ -221,7 +211,7 @@ export const Style = styled.div`
             grid-template-rows: repeat(6, 50px);
             
             .green-border-fill {
-                background: #50E3C2;
+                background: var(--greenColor);
                 grid-column: 1 / 5;
                 grid-row: 1; 
             }
@@ -231,7 +221,7 @@ export const Style = styled.div`
                 grid-row: 1; 
                 align-self: end;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 line-height: 48px;
                 margin-left: 15px;
@@ -257,7 +247,7 @@ export const Style = styled.div`
                 }
             }
             .green-border {
-                border: 20px solid #50E3C2;
+                border: 20px solid var(--greenColor);
                 grid-column: 6 / end;
                 grid-row: 3 / end; 
             }
@@ -277,7 +267,7 @@ export const Style = styled.div`
                 font-weight: bold;
                 font-style: italic;
                 font-size: 24px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
             }
             .number {
@@ -287,7 +277,7 @@ export const Style = styled.div`
                 
                 font-family: "Roboto Black", serif;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: center;
                 line-height: 48px;
             }
@@ -302,7 +292,7 @@ export const Style = styled.div`
             grid-template-rows: repeat(12, 50px);
             
             .green-border {
-                border: 20px solid #50E3C2;
+                border: 20px solid var(--greenColor);
                 grid-column: 1 / 5;
                 grid-row: 2 / 6; 
             }
@@ -316,7 +306,7 @@ export const Style = styled.div`
                 font-style: italic;
                 writing-mode: vertical-lr;
                 font-size: 24px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 margin-left: -17px;
             }
@@ -329,7 +319,7 @@ export const Style = styled.div`
                 transform: rotate(180deg);
                 justify-self: end;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 line-height: 48px;
                 z-index: 2;
@@ -367,7 +357,7 @@ export const Style = styled.div`
                 
                 font-family: "Roboto Black", serif;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: center;
                 line-height: 48px;
             }
@@ -410,7 +400,7 @@ export const Style = styled.div`
                 font-weight: bold;
                 font-style: italic;
                 font-size: 24px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
             }
             .title {
@@ -419,7 +409,7 @@ export const Style = styled.div`
                 grid-column: 1 / end;
                 grid-row: 3;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 line-height: 48px;
                 z-index: 2;
@@ -445,7 +435,7 @@ export const Style = styled.div`
                 }
             }
             .green-border {
-                border: 20px solid #50E3C2;
+                border: 20px solid var(--greenColor);
                 grid-column: 3 / 7;
                 grid-row: 5 / 7; 
             }
@@ -456,7 +446,7 @@ export const Style = styled.div`
                 
                 font-family: "Roboto Black", serif;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: center;
                 line-height: 48px;
             }
@@ -475,7 +465,7 @@ export const Style = styled.div`
                 grid-column: 3 / end;
                 grid-row: 1;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 line-height: 48px;
                 z-index: 2;
@@ -514,17 +504,17 @@ export const Style = styled.div`
                 
                 font-family: "Roboto Black", serif;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: center;
                 line-height: 48px;
             }
             .green-border-fill {
-                background: #50E3C2;
+                background: var(--greenColor);
                 grid-column: 1;
                 grid-row: 6 / 10; 
             }
             .green-border {
-                border: 20px solid #50E3C2;
+                border: 20px solid var(--greenColor);
                 grid-column: 2 / end;
                 grid-row: 5 / end; 
             }
@@ -536,7 +526,7 @@ export const Style = styled.div`
                 font-weight: bold;
                 font-style: italic;
                 font-size: 24px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: center;
             }
         }
@@ -550,7 +540,7 @@ export const Style = styled.div`
             grid-template-rows: repeat(9, 50px);
             
             .green-border {
-                border: 20px solid #50E3C2;
+                border: 20px solid var(--greenColor);
                 grid-column: 2 / 6;
                 grid-row: 1 / 7; 
             }
@@ -563,7 +553,7 @@ export const Style = styled.div`
                 font-weight: bold;
                 font-style: italic;
                 font-size: 24px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 align-self: flex-end;
             }
@@ -581,7 +571,7 @@ export const Style = styled.div`
                 writing-mode: vertical-rl;
                 justify-self: flex-start;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: left;
                 line-height: 48px;
                 z-index: 2;
@@ -607,7 +597,7 @@ export const Style = styled.div`
                 }
             }
             .green-border-fill {
-                background: #50E3C2;
+                background: var(--greenColor);
                 grid-column: 5 / end;
                 grid-row: 6 / end; 
             }
@@ -618,7 +608,7 @@ export const Style = styled.div`
                 
                 font-family: "Roboto Black", serif;
                 font-size: 48px;
-                color: #000000;
+                color: var(--blackColor);
                 text-align: center;
                 line-height: 48px;
             }

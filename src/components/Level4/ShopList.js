@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 import {compose, withHandlers, pure, withState} from "recompose";
 import {Style} from "./style";
 
@@ -19,7 +20,7 @@ const BaseComponent = pure(({level4={}, currentPage=1, todosPerPage=7, handleCli
 
     const indexOfLastTodo = currentPage * todosPerPage;
     const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
-    const currentShopDatas = shop_data.slice(indexOfFirstTodo, indexOfLastTodo);
+    const currentShopDatas = (!_.isEmpty(shop_data)) && shop_data.slice(indexOfFirstTodo, indexOfLastTodo);
 
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(shop_data.length / todosPerPage); i++) {
@@ -60,8 +61,9 @@ const BaseComponent = pure(({level4={}, currentPage=1, todosPerPage=7, handleCli
                         {is_green_border && <div className='green-border'></div>}
                         {is_green_pattern && <div className='green-pattern'></div>}
                         {is_green_fill && <div className='green-border-fill'></div>}
-                        {!_.isEmpty(image) ? <div className='image' style={{backgroundImage: `url(${image})`}}></div> :
-                            <div className='image' style={{backgroundImage: "url('/images/125x125.png')"}}></div>
+                        {!_.isEmpty(image) ?
+                            <Link to={`/level4/${number}`} className='image' style={{backgroundImage: `url(${image})`}}></Link> :
+                            <Link to={`/level4/${number}`} className='image' style={{backgroundImage: "url('/images/125x125.png')"}}></Link>
                         }
                     </div>
                 })
