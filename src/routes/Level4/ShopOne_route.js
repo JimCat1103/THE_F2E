@@ -21,7 +21,7 @@ export class ShopOneRoute extends Component {
             return <ShopOne shop_data={shop_data} />
         }
         else {
-            return <div>資料讀取中</div>
+            return <div>找不到該筆資料</div>
         }
     }
 }
