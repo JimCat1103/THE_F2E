@@ -24,7 +24,7 @@ npm start
 
 ### Level 4 - Product Gallery - try CSS Grid, React
 ####    path: http://localhost:3000/level4
-#####   progress: Home page UI (add pagination, floatable data)
+#####   progress: Done (Home page UI (add pagination, floatable data), Content page UI)
 ---
 
 ####    reference https://www.facebook.com/groups/173311386703334/
