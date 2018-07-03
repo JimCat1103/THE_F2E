@@ -5,6 +5,7 @@ import Level3_orders_route from './Level3/Level3_orders_route';
 import Level3_product_route from './Level3/Level3_product_route';
 import ShopListRoute from './Level4/ShopList_route';
 import ShopOneRoute from './Level4/ShopOne_route';
+import Level5_route from "./Level5/Level5_route";
 
 export default [
     {
@@ -47,6 +48,12 @@ export default [
         exact: true,
         path: "/level4/:id",
         component: ShopOneRoute,
+        layout: 'MainLayout'
+    },
+    {
+        exact: true,
+        path: "/level5",
+        component: Level5_route,
         layout: 'MainLayout'
     }
 ];
