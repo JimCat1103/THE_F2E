@@ -1,12 +1,12 @@
 export const comic_data = [
     {
-        id: 1,
+        id: '1',
         name: 'The F2E Challenge Start!',
         data: [],
         is_new_chapter: false
     },
     {
-        id: 2,
+        id: '2',
         name: 'Todo List is Going Crazy!',
         data: [],
         is_new_chapter: true

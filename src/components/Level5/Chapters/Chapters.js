@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 import {pure} from "recompose";
 import {Style} from "./style";
 
@@ -8,11 +9,13 @@ export function renderComics(comic_data) {
     return comic_data.map((v, index) => {
         const {id, name, is_new_chapter} = v;
         return (
-          <div className='each-chapter' key={`each-chapter-${index}`}>
-              <div>{`Chapter${id}：`}</div>
-              <div>{name}</div>
-              {is_new_chapter && <div className='new-chapter'>NEW</div>}
-          </div>
+          <Link className='each-chapter' key={`each-chapter-${index}`} to={`/level5/${id}`}>
+              <div>
+                  <div>{`Chapter${id}：`}</div>
+                  <div>{name}</div>
+              </div>
+              {is_new_chapter && <div className='new-chapter'><div>NEW</div></div>}
+          </Link>
         );
     })
 }

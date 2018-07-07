@@ -3,7 +3,7 @@ import level2_reducer from './level2_reducer';
 import level3_reducer from './level3/level3_reducer';
 import level3_header_reducer from './level3/level3_header_reducer';
 import level4_reducer from './level4_reducer';
-import level5_reducer from './level5_reducer';
+import level5_reducer from './level5/level5_reducer';
 
 const rootReducer = {
     level1: level1_reducer,

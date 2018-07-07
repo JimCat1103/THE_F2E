@@ -1,4 +1,4 @@
-import {FETCH_COMICS, ON_STARRATE_CLICK} from '../actions/types';
+import {FETCH_COMIC, FETCH_COMICS, ON_STARRATE_CLICK} from '../../actions/types';
 
 const INITIAL_STATE = {
     header_title: 'Comicomic',
@@ -41,6 +41,10 @@ export default function (state = INITIAL_STATE, action) {
                 }
             }
             return state;
+        }
+        case FETCH_COMIC: {
+            const {payload} = action;
+            return {...state, comic_data: payload};
         }
     }
     return state;

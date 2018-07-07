@@ -23,31 +23,58 @@ export const Style = styled.div`
         background: ${WHITE};
         border: 4px solid ${BLACK};
         .each-chapter {
+            list-style: none;
+            text-decoration: none;
             padding: 13px 24px;
             display: flex;
             & > div {
+                display: flex;
                 font-family: "Roboto-Bold", serif;
                 font-size: 16px;
                 color: ${BLACK};
                 line-height: 24px;
                 font-weight: bold;
+                
+                & > div {
+                    font-family: "Roboto-Bold", serif;
+                    font-size: 16px;
+                    color: ${BLACK};
+                    line-height: 24px;
+                    font-weight: bold;
+                }
+                    
             }
             .new-chapter {
-                width: 55px;
-                height: 18px;
-                font-family: 'Roboto-Bold',serif;
-                font-size: 14px;
-                background: ${GREEN};
-                line-height: 18px;
-                font-weight: bold;
-                text-align: center;
-                margin-top: 5px;
-                margin-left: 10px;
+                & > div {
+                    width: 55px;
+                    height: 18px;
+                    font-family: 'Roboto-Bold',serif;
+                    font-size: 14px;
+                    background: ${GREEN};
+                    line-height: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 5px;
+                    margin-left: 10px;
+                }
             }
         }
         .each-chapter:nth-child(1) {
             padding-top: 20px;
             padding-bottom: 0;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        .chapter-content-wrap {
+            .each-chapter {
+                display: block;
+                .new-chapter {
+                    & > div {
+                        margin-left: 0;
+                    }
+                }
+            }
         }
     }
 `;

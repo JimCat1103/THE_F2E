@@ -106,4 +106,21 @@ export const Style = styled.div`
             }
         }
     }
+    
+    @media screen and (max-width: 767px) {
+        display: block;
+        max-width: 100%;
+        .image {
+            width: auto;
+        }
+        .content {
+            .info-wrap {
+                .each-info-txt {
+                    .rating {
+                        padding-right: 15px !important;
+                    }
+                }
+            }
+        }
+    }
 `;
