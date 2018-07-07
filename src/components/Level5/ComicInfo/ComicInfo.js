@@ -36,6 +36,16 @@ const ComicInfo = pure(({
                     }</div>
                 </div>
             </div>
+            <div className='summary-wrap'>
+                <div>Summary</div>
+                {
+                    summary.map((data, index) => {
+                        return <div key={`summary_${index}`} className='summary-text'>
+                            {data}
+                        </div>
+                    })
+                }
+            </div>
         </div>
     </Style>
 });

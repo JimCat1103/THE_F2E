@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {BLACK, WHITE} from "../color_consts";
 
 export const Style = styled.div`
     --whiteColor: #FFFFFF;
@@ -11,29 +12,27 @@ export const Style = styled.div`
     display: flex;
     .image {
         width: 50%;
-        background: var(--whiteColor);
-        border: 4px solid var(--blackColor);
+        background: ${WHITE};
+        border: 4px solid ${BLACK};
         img {
             width: auto;
             height: auto;
             max-width: 100%;
-            //max-height: 438px;
         }
     }
     .content {
         flex: 1;
         .title {
-            background: var(--blackColor);
+            background: ${BLACK};
             height: 52px;
             font-family: Roboto-Bold, serif;
             font-size: 36px;
-            color: var(--whiteColor);
+            color: ${WHITE};
             text-align: center;
         }
         .info-wrap {
             padding-top: 20px;
             padding-left: 20px;
-            position: relative;
             display: flex;
             & > div:nth-child(1) {
                 width: auto;
@@ -43,7 +42,7 @@ export const Style = styled.div`
                     font-family: "Roboto-Bold", serif;
                     font-weight: bold;
                     font-size: 16px;
-                    color: var(--blackColor);
+                    color: ${BLACK};
                     line-height: 24px;
                     margin-bottom: 8px;
                 }
@@ -57,7 +56,7 @@ export const Style = styled.div`
                 & > div {
                     font-family: Roboto-Regular, serif;
                     font-size: 16px;
-                    color: var(--blackColor);
+                    color: ${BLACK};
                     line-height: 24px;
                     margin-bottom: 8px;
                     
@@ -67,23 +66,43 @@ export const Style = styled.div`
                     }
                 }
                 .rating {
-                  unicode-bidi: bidi-override;
-                  direction: rtl;
-                  position: absolute;
-                  bottom: -7px;
+                    unicode-bidi: bidi-override;
+                    direction: rtl;
+                    padding-right: 192px;
+                    padding-top: 7px;
                 }
                 .rating > span {
-                  display: inline-block;
-                  position: relative;
-                  font-size: 36px;
-                  width: 1.1em;
+                    display: inline-block;
+                    position: relative;
+                    font-size: 36px;
+                    width: 1.1em;
                 }
                 .rating > span:hover:before,
                 .rating > span:hover ~ span:before {
-                   content: "\\2605";
-                   position: absolute;
-                   cursor: pointer;
+                    content: "\\2605";
+                    position: absolute;
+                    cursor: pointer;
                 }
+            }
+            margin-bottom: 20px;
+        }
+        .summary-wrap {
+            padding-left: 20px;
+            & > div:nth-child(1) {
+                height: 24px;
+                font-family: "Roboto-Bold", serif;
+                font-weight: bold;
+                font-size: 16px;
+                color: ${BLACK};
+                line-height: 24px;
+                margin-bottom: 8px;
+            }
+            .summary-text {
+                font-family: "Roboto-Regular", serif;
+                font-size: 16px;
+                color: ${BLACK};
+                line-height: 24px;
+                margin-bottom: 20px;
             }
         }
     }

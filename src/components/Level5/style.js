@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-
+import {GRAY} from "./color_consts";
 
 export const Style = styled.div`
-    --grayColor: #F2F2F2;
-    background: var(--grayColor);
+    background: ${GRAY};
+    padding-bottom: 20px;
 `;
