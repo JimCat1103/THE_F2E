@@ -23,4 +23,4 @@ npm start
 
 
 ####    reference https://www.facebook.com/groups/173311386703334/
-####    　 　　 　https://github.com/Wizardgreen/hexSchool-TheF2E-Showcase
+####    　 　　 　https://github.com/hexschool/TheF2E
