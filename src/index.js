@@ -7,6 +7,7 @@ import history from './history';
 import store from './store';
 import routes from './routes/index';
 import MainLayout from './layouts/MainLayout';
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
     <Provider store={store}>

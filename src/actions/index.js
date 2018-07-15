@@ -3,6 +3,7 @@ import {onCheckboxChange, onDisableCheck, onFromDateChange, onToDateChange} from
 import {onMenuChange, onSelectWeek, onWeekSelectClick} from './level3';
 import {fetchShopData, fetchShopDatas} from './level4';
 import {fetchComic, fetchComics, onStarRateClick} from './level5';
+import {onChange, onNextStep, onPrevStep} from './level6';
 
 export {
     initLevel1,
@@ -20,5 +21,8 @@ export {
     fetchShopData,
     onStarRateClick,
     fetchComics,
-    fetchComic
+    fetchComic,
+    onNextStep,
+    onPrevStep,
+    onChange
 };

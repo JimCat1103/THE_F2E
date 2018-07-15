@@ -19,3 +19,7 @@ export const FETCH_LEVEL4_ONE = 'FETCH_LEVEL4_ONE';
 export const ON_STARRATE_CLICK = 'ON_STARRATE_CLICK';
 export const FETCH_COMICS = 'FETCH_COMICS';
 export const FETCH_COMIC = 'FETCH_COMIC';
+
+export const ON_NEXT_STEP = 'ON_NEXT_STEP';
+export const ON_PREV_STEP = 'ON_PREV_STEP';
+export const LEVEL6_ONCHANGE = 'LEVEL6_ONCHANGE';
