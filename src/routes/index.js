@@ -8,6 +8,7 @@ import ShopOneRoute from './Level4/ShopOne_route';
 import Level5_route from "./Level5/Level5_route";
 import ComicOneRoute from "./Level5/ComicOne_route";
 import Level6_route from './Level6/Level6_route';
+import Level7_route from './Level7/Level7_route';
 
 export default [
     {
@@ -68,6 +69,12 @@ export default [
         exact: true,
         path: "/level6",
         component: Level6_route,
+        layout: 'MainLayout'
+    },
+    {
+        exact: true,
+        path: "/level7",
+        component: Level7_route,
         layout: 'MainLayout'
     },
 ];
