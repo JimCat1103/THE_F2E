@@ -11,13 +11,13 @@ npm start
 
 | 週別 | 題目名稱 | 作品 | progress |
 | ---- | ------- | ---- | ---- |
-| 01 | ToList   | http://localhost:3000/level1 | unfinished  |
+| 01 | ToList   | http://localhost:3000/level1 | unfinished |
 | 02 | Filter   | http://localhost:3000/level2 | Home page UI done  |
 | 03 | Admin order   | http://localhost:3000/level3 | Home page UI done |
 | 04 | Product Gallery   | http://localhost:3000/level4 | Done (Home page (add pagination, floatable data), Content page) |
 | 05 | Comic Viewer   | http://localhost:3000/level5 | Home page UI done   |
 | 06 | validation   | http://localhost:3000/level6 | Home page UI done, Second page => half   |
-| 07 |    |   |   |
+| 07 | Canvas遊戲   | http://localhost:3000/level7 | unfinished |
 | 08 |    |   |   |
 | 09 |    |   |   |
 
