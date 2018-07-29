@@ -1,1 +1,1 @@
-export default from './Level7';
+export Level7 from './Level7';
