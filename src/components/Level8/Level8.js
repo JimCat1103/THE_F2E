@@ -33,9 +33,9 @@ class Level8 extends Component {
         TweenMax.to(this.cir, opening.duration/2, {css: {scale: 1.1}});
         TweenMax.to(this.cir, opening.duration/2, {css: {scale: 1}, delay: opening.duration/2});
 
-        TweenMax.to(this.square, 0.5, {css: {scale: 7}, ease: Power2.easeInOut, delay: opening.duration+0.3});
-        TweenMax.to(this.cir, 0.5, {css: {scale: 7}, ease: Power2.easeInOut, delay: opening.duration+0.6});
-        TweenMax.to(this.star, 0.5, {css: {scale: 7}, ease: Power2.easeInOut, delay: opening.duration+0.9});
+        TweenMax.to(this.square, 0.5, {css: {scale: 12}, ease: Power2.easeInOut, delay: opening.duration+0.3});
+        TweenMax.to(this.cir, 0.5, {css: {scale: 12}, ease: Power2.easeInOut, delay: opening.duration+0.6});
+        TweenMax.to(this.star, 0.5, {css: {scale: 12}, ease: Power2.easeInOut, delay: opening.duration+0.9});
         TweenMax.to('.opening', 1.5, {opacity: 0, delay: opening.duration+1.5});
         TweenMax.to(this.titleBlock, 1.5, {opacity: 0, delay: opening.duration+1.8, onComplete: () => {
                 $('.opening').remove();
