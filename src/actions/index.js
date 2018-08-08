@@ -4,6 +4,7 @@ import {onMenuChange, onSelectWeek, onWeekSelectClick} from './level3';
 import {fetchShopData, fetchShopDatas} from './level4';
 import {fetchComic, fetchComics, onStarRateClick} from './level5';
 import {onChange, onNextStep, onPrevStep} from './level6';
+import {fetchTheF2eApi} from './TheF2E_api';
 
 export {
     initLevel1,
@@ -24,5 +25,6 @@ export {
     fetchComic,
     onNextStep,
     onPrevStep,
-    onChange
+    onChange,
+    fetchTheF2eApi
 };

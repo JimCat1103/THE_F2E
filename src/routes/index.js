@@ -11,6 +11,7 @@ import Level6_route from './Level6/Level6_route';
 import Level7_route from './Level7/Level7_route';
 import Level8_route from "./Level8/Level8_route";
 import Level9_route from "./Level9/Level9_route";
+import Api_route from "./Api_route";
 
 export default [
     {
@@ -89,6 +90,12 @@ export default [
         exact: true,
         path: "/level9",
         component: Level9_route,
+        layout: 'MainLayout'
+    },
+    {
+        exact: true,
+        path: '/',
+        component: Api_route,
         layout: 'MainLayout'
     }
 ];

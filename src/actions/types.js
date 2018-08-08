@@ -23,3 +23,5 @@ export const FETCH_COMIC = 'FETCH_COMIC';
 export const ON_NEXT_STEP = 'ON_NEXT_STEP';
 export const ON_PREV_STEP = 'ON_PREV_STEP';
 export const LEVEL6_ONCHANGE = 'LEVEL6_ONCHANGE';
+
+export const GET_CERTIFICATE = 'GET_CERTIFICATE';
