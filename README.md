@@ -1,5 +1,13 @@
 # 六角學院活動 - The F2E - 前端修練精神時光屋
 
+活動結束了，感謝主辦方，再來該找時間慢慢補齊了
+預定：
+1. UI all done
+2. feature ok
+3. add testing
+4. refined(js code, css style)
+
+
 #####  use
 ```
 npm install
