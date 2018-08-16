@@ -3,7 +3,7 @@ import moment from 'moment';
 import _ from 'lodash';
 
 const INITIAL_STATE = {
-    is_write_task: false,
+    is_add_new_task: false,
     startDate: moment(),
     startTime: moment(),
     uploadFile: [],

@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from "prop-types";
 import {pure} from 'recompose';
 import {Style} from './style';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import AddTaskButton from "./AddTaskButton/AddTaskButton";
-import EditTask from "./EditTask/EditTask";
+import {Tab, TabList, TabPanel, Tabs} from 'react-tabs';
+import AddTask from "./AddTask/AddTask";
 
-const Level1 = pure(({level1={}, onDateChange=()=>{}, onTimeChange=()=>{}, onDrop=()=>{}})=>{
+const Level1 = pure(({is_add_new_task=false, level1={}, onDateChange=()=>{}, onTimeChange=()=>{}, onDrop=()=>{}})=>{
     return <Style>
         <Tabs className='tab-wrap'>
             <TabList className='tab-top'>
@@ -16,14 +15,33 @@ const Level1 = pure(({level1={}, onDateChange=()=>{}, onTimeChange=()=>{}, onDro
             </TabList>
 
             <TabPanel>
-                <AddTaskButton/>
-                <EditTask onDateChange={onDateChange} onTimeChange={onTimeChange} onDrop={onDrop} level1={level1} />
+                <AddTask
+                    level1={level1}
+                    is_add_new_task={is_add_new_task}
+                    onDateChange={onDateChange}
+                    onTimeChange={onTimeChange}
+                    onDrop={onDrop}
+                />
                 <h2>Any content 1</h2>
             </TabPanel>
             <TabPanel>
+                <AddTask
+                    level1={level1}
+                    is_add_new_task={is_add_new_task}
+                    onDateChange={onDateChange}
+                    onTimeChange={onTimeChange}
+                    onDrop={onDrop}
+                />
                 <h2>Any content 2</h2>
             </TabPanel>
             <TabPanel>
+                <AddTask
+                    level1={level1}
+                    is_add_new_task={is_add_new_task}
+                    onDateChange={onDateChange}
+                    onTimeChange={onTimeChange}
+                    onDrop={onDrop}
+                />
                 <h2>Any content 3</h2>
             </TabPanel>
         </Tabs>

@@ -1,25 +1,49 @@
 import React from 'react';
-import PropTypes from "prop-types";
 import {pure} from 'recompose';
 import {Style} from './style';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Dropzone from "react-dropzone";
+import Checkbox from "@material-ui/core/Checkbox";
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faStar from '@fortawesome/fontawesome-free-solid/faStar';
+import faPencilAlt from '@fortawesome/fontawesome-free-solid/faPencilAlt';
+import faCalendarAlt from '@fortawesome/fontawesome-free-solid/faCalendarAlt';
+import faFile from '@fortawesome/fontawesome-free-solid/faFile';
+import faCommentDots from '@fortawesome/fontawesome-free-solid/faCommentDots';
+import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
 
 const EditTask = pure(({level1 ={}, onDateChange=()=>{}, onTimeChange=()=>{}, onDrop=()=>{}})=>{
     const {startDate, startTime, files} = level1;
     console.log(files);
     return <Style>
         <div className='title'>
-            <div><input type='checkbox' /></div>
-            <div><div className='title-input'><input type='input'/></div></div>
-            <div>start</div>
-            <div>edit</div>
+            <div className='done-checkbox'>
+                <Checkbox
+                    checked={false}
+                    onChange={()=>{}}
+                />
+            </div>
+            <div className='title-input'>
+                <input
+                    type='input'
+                    placeholder='Type Something Here…'
+                />
+            </div>
+            <div className='my-favorite'>
+                <FontAwesomeIcon icon={faStar} />
+            </div>
+            <div className='edit-btn'>
+                <FontAwesomeIcon icon={faPencilAlt} />
+            </div>
         </div>
 
         <div className='content'>
             <div className='date-and-time'>
-                <div>DeadLine</div>
+                <div className='date-title'>
+                    <div><FontAwesomeIcon icon={faCalendarAlt} /></div>
+                    <div>DeadLine</div>
+                </div>
                 <div className='picker'>
                     <div className='date'>
                         <DatePicker
@@ -27,6 +51,7 @@ const EditTask = pure(({level1 ={}, onDateChange=()=>{}, onTimeChange=()=>{}, on
                             relativeSize={true}
                             selected={startDate}
                             onChange={startDate => onDateChange(startDate)}
+                            popperClassName='date-picker-popper'
                         />
                     </div>
                     <div className='time'>
@@ -46,7 +71,11 @@ const EditTask = pure(({level1 ={}, onDateChange=()=>{}, onTimeChange=()=>{}, on
             </div>
 
             <div className='upload-file'>
-                <div>File</div>
+                <div className='upload-file-title'>
+                    <div><FontAwesomeIcon icon={faFile} /></div>
+                    <div>File</div>
+                </div>
+
                 <section>
                     <div className="dropzone">
                         <Dropzone
@@ -74,14 +103,30 @@ const EditTask = pure(({level1 ={}, onDateChange=()=>{}, onTimeChange=()=>{}, on
             </div>
             
             <div className='edit-content'>
-                <div>Comment</div>
+                <div className='edit-content-title'>
+                    <div><FontAwesomeIcon icon={faCommentDots} /></div>
+                    <div>Comment</div>
+                </div>
                 <div>
                     <textarea placeholder='Type your memo here…'></textarea>
                 </div>
             </div>
         </div>
         <img src="" alt=""/>
-        <div className='edit-footer'></div>
+        <div className='edit-footer'>
+            <div>
+                <div>
+                    <FontAwesomeIcon icon={faTimes} />
+                    <span>Cancel</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <FontAwesomeIcon icon={faTimes} />
+                    <span>Add Task</span>
+                </div>
+            </div>
+        </div>
     </Style>
 });
 
