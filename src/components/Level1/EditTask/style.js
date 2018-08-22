@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Style = styled.div`
+    display: ${props => props.disable && 'none'};
     margin: 20px auto 0;
     background: #F2F2F2;
     border: 2px solid #C8C8C8;

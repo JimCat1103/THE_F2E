@@ -10,7 +10,7 @@ const AddTask = pure(({is_add_new_task = false, level1={}, onDateChange=()=>{}, 
         <AddTaskButton
             is_add_new_task={is_add_new_task}
         />
-        <EditTask onDateChange={onDateChange} onTimeChange={onTimeChange} onDrop={onDrop} level1={level1} />
+        <EditTask disable={true} onDateChange={onDateChange} onTimeChange={onTimeChange} onDrop={onDrop} level1={level1} />
     </Style>
 });
 

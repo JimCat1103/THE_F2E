@@ -1,13 +1,31 @@
-import {FETCH_LEVEL1, ON_DATE_CHANGE, ON_FILE_DROP, ON_TIME_CHANGE} from "../actions/types";
+import {FETCH_LEVEL1, ON_DATE_CHANGE, ON_FILE_DROP, ON_TIME_CHANGE} from "../../actions/types";
 import moment from 'moment';
-import _ from 'lodash';
 
 const INITIAL_STATE = {
     is_add_new_task: false,
     startDate: moment(),
     startTime: moment(),
     uploadFile: [],
-    files: []
+    files: [],
+
+    allTask: [
+        {
+            title: 'First Task',
+            date: '2018/08/22',
+            attachments: [],
+            comments: '123512353215',
+            is_completed: false,
+            is_marked: false
+        },
+        {
+            title: 'Second Task',
+            date: '2018/08/23',
+            attachments: [],
+            comments: '00000000000000',
+            is_completed: true,
+            is_marked: true
+        }
+    ]
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -23,16 +41,6 @@ export default function (state = INITIAL_STATE, action) {
         }
         case ON_FILE_DROP: {
             const { payload } = action;
-            const chatbot = {
-                name: 'chatbot',
-                title: '診所粉絲團預約機器人',
-                subtitle: '讓自動預約機器人幫您打造最便利的預約管理系統',
-                content: ['綁定FB粉絲團引導民眾便利預約', '預約或即時推播訊息', '管理診所及醫師專業看診資料', '預約紀錄管理'],
-            };
-            console.log(_.keys(chatbot).map((x) => {
-                console.log(chatbot[x]);
-            }));
-
             const newState = state.files;
             const files = newState.push(payload);
             return {...state, ...files}

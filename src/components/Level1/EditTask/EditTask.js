@@ -13,10 +13,10 @@ import faFile from '@fortawesome/fontawesome-free-solid/faFile';
 import faCommentDots from '@fortawesome/fontawesome-free-solid/faCommentDots';
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
 
-const EditTask = pure(({level1 ={}, onDateChange=()=>{}, onTimeChange=()=>{}, onDrop=()=>{}})=>{
+const EditTask = pure(({disable=true, level1 ={}, onDateChange=()=>{}, onTimeChange=()=>{}, onDrop=()=>{}})=>{
     const {startDate, startTime, files} = level1;
     console.log(files);
-    return <Style>
+    return <Style disable={disable}>
         <div className='title'>
             <div className='done-checkbox'>
                 <Checkbox
